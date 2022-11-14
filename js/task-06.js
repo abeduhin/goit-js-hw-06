@@ -4,6 +4,9 @@ textInputEl.addEventListener('blur', event => {
 // Додаєм слухача події blur 
 	if (event.currentTarget.value.length == textInputEl.getAttribute('data-length')) {
 		textInputEl.classList.add('valid')
+		if (textInputEl.classList.contains('invalid')) {
+			textInputEl.classList.remove('invalid')
+		}
 		
 	} else {
 		if (textInputEl.classList.contains('valid')) {
